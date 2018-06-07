@@ -1,0 +1,860 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--<![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <title></title>
+  <style>
+    /* Basics */
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      Margin: 0 !important;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .separator {
+      display: none;
+      margin-bottom: 80px !important;
+    }
+
+    @media screen and (min-width: 768px) {
+      body {
+        background-color: #F2F2F2;
+      }
+
+      .wrapper {
+        background-color: #F2F2F2;
+      }
+    }
+
+    body,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Open Sans', 'Arial', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    table {
+      border-spacing: 0;
+      font-family: 'Open Sans', 'Arial', sans-serif;
+      color: #333333;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    td {
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      border: 0;
+    }
+
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+    }
+
+    .webkit {
+      max-width: 630px;
+      Margin: 0 auto;
+    }
+
+    .outer {
+      Margin: 0 auto;
+      Padding: 0 5px;
+      width: 100%;
+      max-width: 630px;
+    }
+
+    .table-content {
+      Margin: 0 auto;
+      padding-bottom: 16px;
+      width: 100%;
+      background-color: #fff;
+    }
+
+    .table-inner-content {
+      Margin: 0 auto;
+      width: 100%;
+      max-width: 590px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    .full-image img:not(.icon) {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+
+    .inner {
+      padding: 10px;
+    }
+
+    .text {
+      color: #595959;
+    }
+
+    .text.logo {
+      width: 120px;
+    }
+
+    .text.logo p {
+      display: none;
+    }
+
+    p {
+      Margin: 0;
+    }
+
+    a {
+      color: #ee6a56;
+      text-decoration: underline;
+    }
+
+    .h1 {
+      font-size: 21px;
+      font-weight: bold;
+      Margin-bottom: 18px;
+    }
+
+    .h2 {
+      font-size: 18px;
+      font-weight: bold;
+      Margin-bottom: 12px;
+    }
+
+    /* One column layout */
+
+    .one-column .contents {
+      text-align: left;
+    }
+
+    .one-column p {
+      font-size: 14px;
+      Margin-bottom: 10px;
+    }
+
+    /*Two column layout*/
+
+    .two-column {
+      text-align: center;
+      font-size: 0;
+    }
+
+    .two-column .column {
+      width: 100%;
+      max-width: 300px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .contents {
+      width: 100%;
+    }
+
+    .two-column .contents {
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .two-column img:not(.icon) {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+    }
+
+    .two-column .text {
+      padding-top: 10px;
+    }
+
+    /*Three column layout*/
+
+    .three-column {
+      text-align: center;
+      font-size: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .three-column .column {
+      width: 100%;
+      max-width: 200px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .three-column .contents {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .three-column img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+    }
+
+    .three-column .text {
+      padding-top: 10px;
+    }
+
+    /* Left sidebar layout */
+
+    .left-sidebar {
+      text-align: center;
+      font-size: 0;
+    }
+
+    .left-sidebar .column {
+      width: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .left-sidebar .left {
+      max-width: 100px;
+    }
+
+    .left-sidebar .right {
+      max-width: 500px;
+    }
+
+    .left-sidebar .img {
+      width: 100%;
+      max-width: 80px;
+      height: auto;
+    }
+
+    .left-sidebar .contents {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .left-sidebar a {
+      color: #85ab70;
+    }
+
+    .two-normal-column {
+      text-align: center;
+      font-size: 0;
+      border-bottom: 1px solid #CBCBCB;
+    }
+
+    .two-normal-column .column {
+      width: 50%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .btn-default {
+      text-transform: uppercase;
+      background-color: #2397D4;
+      color: #fff;
+      width: 100%;
+      max-width: 630px;
+      display: inline-table;
+      text-decoration: none;
+      height: 48px;
+      vertical-align: middle;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .btn-default>span {
+      display: inline-table;
+      margin-top: 15px;
+      margin-right: 4px;
+    }
+
+    .btn-default>span:last-child {
+      margin-left: 5px;
+    }
+
+    .btn-default:hover {
+      background-color: #2397D4;
+    }
+
+    .info-default {
+      width: 100%;
+      max-width: 630px;
+      border: 1px solid #7F7F7F;
+      padding: 11px 0;
+      /* min-height: 40px; */
+      border-radius: 3px;
+      font-size: 14px;
+      font-weight: bold;
+      color: #7F7F7F;
+      text-align: center;
+    }
+
+    .info-default>span {
+      /* margin-top: 11px; */
+      /* margin-bottom: 11px; */
+      display: block;
+    }
+
+    .product__image {
+      width: 40px;
+      height: 40px;
+      display: none;
+    }
+
+    .barcode {
+      display: none;
+    }
+
+    @media screen and (min-width: 468px) {
+      .product__image {
+        display: block;
+      }
+      .product__wrapper {
+        margin-left: 24px;
+      }
+
+      .barcode {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: 968px) {
+      .product__image {
+        width: 95px;
+        height: 95px;
+      }
+    }
+
+    .title {
+      line-height: 28px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    @media screen and (min-width: 968px) {
+      .title {
+        font-size: 24px;
+      }
+    }
+
+    .title {
+      line-height: 28px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    .subtitle {
+      line-height: 28px;
+      font-size: 20px;
+      font-weight: 400;
+      color: #fff;
+    }
+
+    .subtitle.content {
+      max-width: 410px;
+    }
+
+    .paragraph {
+      font-size: 18px;
+      color: #fff;
+    }
+
+    @media screen and (min-width: 968px) {
+      .title {
+        font-size: 24px;
+      }
+      .subtitle {
+        font-size: 24px;
+      }
+    }
+
+    @media screen and (max-width: 580px) {
+      .separator {
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 520px) {
+      .two-normal-column {
+        padding: 20px 0;
+      }
+
+      .two-normal-column .column {
+        display: block;
+        width: 100%;
+      }
+
+      .two-normal-column .column td {
+        width: 100% !important;
+        text-align: center !important;
+      }
+
+      .text.description {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      .text.logo p {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+  <!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+        table {border-collapse: collapse;}
+    </style>
+    <![endif]-->
+</head>
+
+<body>
+  <center class="wrapper">
+    <div class="webkit">
+      <!--[if (gte mso 9)|(IE)]>
+          <table width="600" align="center">
+          <tr>
+          <td>
+          <![endif]-->
+      <table class="outer" align="center">
+        <tr>
+          <td height="100" class="two-normal-column">
+            <div class="column">
+              <table width="100%">
+                <tr>
+                  <td>
+                    <table class="contents">
+                      <tr>
+                        <td style="text-align: left;">
+                          <img src="lmm.png" srcset="lmm@2x.png" alt="Merchant logo" width="auto" height="40" />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="column">
+              <table width="100%">
+                <tr>
+                  <td>
+                    <table class="contents">
+                      <tr>
+                        <td class="text description" style="vertical-align: center; font-size: 12px; text-align: right;">
+                          <p>Pagamento via</p>
+                        </td>
+                        <td class="text logo" style="vertical-align: center; font-size: 12px; text-align: right;">
+                          <p>Pagamento via</p>
+                          <img src="logo-ebanx" srcset="logo-ebanx@2x.png" alt="EBANX" width="110" height="22" style="display: inline-block;" />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <br />
+            <br />
+            <img src="status-payment-confirmed.png" srcset="status-payment-confirmed@2x.png" alt="Pagamento confirmado" width="395" height="100" style="max-width: 100%;
+             height: auto;">
+            <br />
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td style="border-radius: 5px 5px 0px 0px; padding: 25px 32px; background-color: #2ECC71;">
+            <strong class="title"> Olá << NAME >>, </strong>
+            <p class="subtitle content">seu pagamento no site << MERCHANT >> foi confirmado.</p>
+            <br />
+            <p class="paragraph"><b>Agora é só aguardar sua encomenda chegar :)</b></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table class="table-content" align="center" style="border-radius: 0px 0px 5px 5px;">
+              <tbody>
+                <tr>
+                  <td>
+                    <table class="table-inner-content" align="center">
+                      <tr>
+                        <td height="15"></td>
+                      </tr>
+                      <tr>
+                        <td style="padding-top: 10px; padding-bottom: 10px;">
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <p><b>Informações do pagamento</b></p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding-top: 10px; padding-bottom: 10px;">
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <table style="width: 100%; padding: 15px 20px; font-size: 14px; color: #EC7063; background-color: #FCF3CF; border-radius: 3px; text-align: center;">
+                                    <tr>
+                                      <td width="60" style="text-align: right;">
+                                        <img width="40" height="36" src="icon-alert.png" srcset="icon-alert@2x.png" alt="Alert" />
+                                      </td>
+                                      <td>
+                                        <p style="display: inline-block; width: 100%;">
+                                          <b>Em sua fatura aparecerá a descrição <i>"EBANX*AIRBNB"</i></b>
+                                        </p>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="23"></td>
+                      </tr>
+                      <tr>
+                        <td style="font-size: 12px; text-align: left;">
+                          <div style="display: inline-block;">
+                            <table width="100%">
+                              <tr>
+                                <td>
+                                  <table class="contents" style="font-size: 14px; color: #7F7F7F;">
+
+                                    <tr height="28">
+                                      <td>
+                                        <p><b>Cód. Pedido:</b></p>
+                                      </td>
+                                      <td>
+                                        <p style="margin-left: 10px;">0GW1AQwkYNh4taoPk73vB4f2zj8</p>
+                                      </td>
+                                    </tr>
+
+                                    <tr height="28">
+                                      <td>
+                                        <p><b>Data/hora:</b></p>
+                                      </td>
+                                      <td>
+                                        <p style="margin-left: 10px;">12/03/2018 - 14:34:32</p>
+                                      </td>
+                                    </tr>
+
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+
+                          <div style="max-width: 620px; margin-left: auto; margin-right: auto; margin-top: 24px; margin-bottom: 10px; text-align: center;">
+                            <hr width="100%" align="center" style="margin: 0 auto; border-style: solid; border-top-color: #CBCBCB; border-bottom-color: #CBCBCB; border-right-color: #CBCBCB; border-left-color: #CBCBCB;">
+                          </div>
+
+                          <div style="display: block;">
+                            <table width="100%">
+                              <tr>
+                                <td>
+                                  <table class="contents" style="font-size: 14px; color: #7F7F7F;">
+
+                                    <tr>
+                                      <td height="28" style="width:50%; text-align: left;">
+                                        <p>PIN</p>
+                                      </td>
+                                      <td height="28" style="width:50%; text-align: right;">
+                                        <p><b>362057487</b></p>
+                                      </td>
+                                    </tr>
+
+                                    <tr>
+                                      <td height="28" style="width:50%; text-align: left;">
+                                        <p>Cartão de crédito final</p>
+                                      </td>
+                                      <td height="28" style="width:50%; text-align: right;">
+                                        <p><b>4352</b></p>
+                                      </td>
+                                    </tr>
+
+                                    <tr>
+                                      <td height="28" style="width:50%; text-align: left;">
+                                        <p>Valor original em BRL</p>
+                                      </td>
+                                      <td height="28" style="width:50%; text-align: right;">
+                                        <p><b>R$ 0,42</b></p>
+                                      </td>
+                                    </tr>
+
+                                    <tr>
+                                      <td height="28" style="width:50%; text-align: left;">
+                                        <p>IOF 0,38%</p>
+                                      </td>
+                                      <td height="28" style="width:50%; text-align: right;">
+                                        <p><b>R$ 3,33</b></p>
+                                      </td>
+                                    </tr>
+
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+
+                          <div style="max-width: 620px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px; text-align: center;">
+                            <hr width="100%" align="center" style="margin: 0 auto; border-style: solid; border-top-color: #CBCBCB; border-bottom-color: #CBCBCB; border-right-color: #CBCBCB; border-left-color: #CBCBCB;">
+                          </div>
+
+                          <div style="display: block;">
+                            <table width="100%">
+                              <tr>
+                                <td>
+                                  <table class="contents" style="font-size: 14px; color: #7F7F7F;">
+
+                                    <tr>
+                                      <td style="width:50%; text-align: left;">
+                                        <p style="font-size: 18px; font-weight: 700; color: #595959;">Total</p>
+                                      </td>
+                                      <td style="width:50%; text-align: right;">
+                                        <p style="font-size: 24px; color: #595959;"><b>R$220,52</b></p>
+                                      </td>
+                                    </tr>
+
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                          <br />
+                          <div style="display: block; vertical-align: top; ">
+                            <table width="100%">
+                              <tr>
+                                <td>
+                                  <table class="contents">
+                                    <tr>
+                                      <p style="font-size: 12px; color: #808080;">Esse pagamento está sendo feito através de uma operação de câmbio. Os valores exatos dessa transação estarão disponíveis nesse link em 40 dias. Fique tranquilo. O valor final da sua compra (R$ 220,52) continuará igual mesmo com a variação do dólar. Lembramos que, ao efetuar o pagamento, você está de acordo com os <a href="https://www.ebanx.com/br/termos" title="Termos e Condições EBANX" target="_blank" style="color: #2397D4;"/>Termos e Condições</a> EBANX.</p>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </table>
+                          </div>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <br />
+
+            <table class="table-content table-border" align="center" style="border-radius: 5px;">
+              <tr>
+                <td>
+                  <table class="table-inner-content" align="center">
+                    <tr>
+                      <td height="16"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table class="contents">
+                          <div class="separator" style="max-width: 620px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px; text-align: center;">
+                            <hr width="100%" align="center" style="margin: 0 auto; border-style: solid; border-top-color: #CBCBCB; border-bottom-color: #CBCBCB; border-right-color: #CBCBCB; border-left-color: #CBCBCB;">
+                          </div>
+                          <tr>
+                            <td width="80" valign="top">
+                              <img src="icon-delivery.png" srcset="icon-delivery@2x.png" width="60" height="52" alt="Prazo de entrega" />
+                            </td>
+                            <td>
+                              <h4 style="margin: 0; font-size: 16px; font-weight: 700; color: #7F7F7F;">Prazo de entrega</h4>
+                              <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">Vale lembrar que em função do processo nacional de importação, pedidos feitos em sites internacionais podem levar mais tempo para serem entregues. Saiba mais clicando <a href="https://help.ebanx.com/hc/pt-br/articles/115011796848" title="Central de ajuda" target="_blank" style="color: #2397D4;">aqui</a>.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <br />
+
+            <table class="table-content table-border" align="center" style="border-radius: 5px;">
+              <tr>
+                <td>
+                  <table class="table-inner-content" align="center">
+                    <tr>
+                      <td height="16"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table class="contents">
+                          <div class="separator" style="max-width: 620px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px; text-align: center;">
+                            <hr width="100%" align="center" style="margin: 0 auto; border-style: solid; border-top-color: #CBCBCB; border-bottom-color: #CBCBCB; border-right-color: #CBCBCB; border-left-color: #CBCBCB;">
+                          </div>
+                          <tr>
+                            <td width="80" valign="top">
+                              <img src="icon-tracking.png" srcset="icon-tracking@2x.png" width="60" height="60" alt="Acompanhe seu pedido" />
+                            </td>
+                            <td>
+                              <h4 style="margin: 0; font-size: 16px; font-weight: 700; color: #7F7F7F;">Acompanhe seu pedido</h4>
+                              <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">Caso queira saber como acompanhar sua encomenda, acesse o artigo da nossa Central de Ajuda clicando <a href="https://help.ebanx.com/hc/pt-br/articles/115005876268" title="Central de ajuda" target="_blank" style="color: #2397D4;">aqui</a>.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+
+            <br />
+
+            <table class="table-content table-border" align="center" style="border-radius: 5px;">
+              <tr>
+                <td>
+                  <table class="table-inner-content" align="center">
+                    <tr>
+                      <td height="16"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table class="contents">
+                          <div class="separator" style="max-width: 620px; margin-left: auto; margin-right: auto; margin-top: 10px; margin-bottom: 10px; text-align: center;">
+                            <hr width="100%" align="center" style="margin: 0 auto; border-style: solid; border-top-color: #CBCBCB; border-bottom-color: #CBCBCB; border-right-color: #CBCBCB; border-left-color: #CBCBCB;">
+                          </div>
+                          <tr>
+                            <td width="80" valign="top">
+                              <img src="icon-help.png" srcset="icon-help@2x.png" width="62" height="61" alt="Dúvidas" />
+                            </td>
+                            <td>
+                              <h4 style="margin: 0; font-size: 16px; font-weight: 700; color: #7F7F7F;">Dúvidas</h4>
+                              <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">Se tiver alguma dúvida sobre sua compra, entre em contato diretamente com o << MERCHANT >>. Apenas o site onde a compra foi realizada possui as informações sobre o seu pedido.
+                              <br />
+                              <br />
+                              <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">Para te ajudar ainda mais, o EBANX tem uma <a href="https://help.ebanx.com/hc/pt-br" title="Central de Ajuda" target="_blank" style="color: #2397D4">Central de Ajuda</a> com vários tópicos que podem facilitar a sua vida. Clique <a href="https://help.ebanx.com/hc/pt-br" title="Central de Ajuda" target="_blank" style="color: #2397D4">aqui</a> e acesse.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="65"></td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <h6 style="margin-top: 0; margin-bottom: 20px; font-size: 18px; font-weight: 700; color: #595959;"><< NAME >>, conheça a Conta EBANX.</h6>
+                <p style="font-size: 18px; color: #595959;">Aproveite para conhecer a Conta EBANX. Através dela você pode comprar em sites internacionais e ainda ter acesso ao histórico de compras que você já fez através do EBANX.</p>
+                <a href="https://conta.ebanx.com/customer/sign_up" target="_blank" title="Criar uma Conta EBANX" style="display: inline-block; margin: 20px 0; font-size: 14px; font-weight: 700; padding: 15px 35px; border-radius: 50px; color: #fff; text-decoration: none; text-transform: uppercase; background-color: #2397D4;">Criar uma Conta EBANX</a>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="65"></td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" align="center">
+              <tr>
+                <td>
+                  <table width="100%" align="center">
+                    <tr>
+                      <td>
+                        <td cellspacing="0" cellpadding="0">
+                          <hr width="100%" style="margin: 0; border-style: solid; border-top-color: #CBCBCB; border-bottom-color: #CBCBCB; border-right-color: #CBCBCB; border-left-color: #CBCBCB;">
+                        </td>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height="35"></td>
+              </tr>
+              <tr align="center">
+                <td width="100%" align="center">
+                  <p style="margin-bottom: 15px; text-align: center; font-size: 12px; color: #808080;">Pode confiar. Você pagou com EBANX. ;)</p>
+                  <img src="logo-ebanx.png" srcset="logo-ebanx@2x.png" width="92" height="18" alt="EBANX" />
+                </td>
+              </tr>
+              <tr>
+                <td height="35"></td>
+              </tr>
+              <tr>
+                <td>
+                  <table width="100%" align="center" style="max-width: 310px;">
+                    <tr>
+                      <td style="font-size: 18px; color: #595959; text-align: left;">
+                        <img src="https://ibb.co/hMGaEH" width="124" alt="">
+                      </td>
+                      <td style="font-weight: bold; font-size: 24px; color: #595959; text-align: right;">
+                        <img src="https://ibb.co/mOXAgx" width="92" alt="">
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td height="50"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+    </div>
+  </center>
+</body>
+
+</html>

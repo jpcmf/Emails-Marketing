@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--<![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <title></title>
+  <style>
+    /* Basics */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      Margin: 0 !important;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      background-color: #F2F2F2;
+    }
+
+    body,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Open Sans', 'Arial', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    table {
+      border-spacing: 0;
+      font-family: 'Open Sans', 'Arial', sans-serif;
+      color: #333333;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    td {
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img {
+      border: 0;
+    }
+
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+      background-color: #F2F2F2;
+    }
+
+    .webkit {
+      max-width: 630px;
+      Margin: 0 auto;
+    }
+
+    .outer {
+      Margin: 0 auto;
+      Padding: 0 5px;
+      width: 100%;
+      max-width: 630px;
+    }
+
+    .table-content {
+      Margin: 0 auto;
+      padding-bottom: 16px;
+      width: 100%;
+      background-color: #fff;
+    }
+
+    .table-inner-content {
+      Margin: 0 auto;
+      width: 100%;
+      max-width: 590px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    .full-image img:not(.icon) {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+    }
+
+    .inner {
+      padding: 10px;
+    }
+
+    .text {
+      color: #595959;
+    }
+
+    .text.logo {
+      width: 120px;
+    }
+
+    .text.logo p {
+      display: none;
+    }
+
+    @media screen and (max-width: 468px) {
+      .logo {
+        padding-top: 12px;
+      }
+    }
+
+    p {
+      Margin: 0;
+    }
+
+    a {
+      color: #ee6a56;
+      text-decoration: underline;
+    }
+
+    .h1 {
+      font-size: 21px;
+      font-weight: bold;
+      Margin-bottom: 18px;
+    }
+
+    .h2 {
+      font-size: 18px;
+      font-weight: bold;
+      Margin-bottom: 12px;
+    }
+
+    /* One column layout */
+
+    .one-column .contents {
+      text-align: left;
+    }
+
+    .one-column p {
+      font-size: 14px;
+      Margin-bottom: 10px;
+    }
+
+    /*Two column layout*/
+
+    .two-column {
+      text-align: center;
+      font-size: 0;
+    }
+
+    .two-column .column {
+      width: 100%;
+      max-width: 300px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .contents {
+      width: 100%;
+    }
+
+    .two-column .contents {
+      font-size: 14px;
+      text-align: left;
+    }
+
+    .two-column img:not(.icon) {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+    }
+
+    .two-column .text {
+      padding-top: 10px;
+    }
+
+    /*Three column layout*/
+
+    .three-column {
+      text-align: center;
+      font-size: 0;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .three-column .column {
+      width: 100%;
+      max-width: 200px;
+      display: inline-block;
+      vertical-align: top;
+    }
+
+    .three-column .contents {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .three-column img {
+      width: 100%;
+      max-width: 180px;
+      height: auto;
+    }
+
+    .three-column .text {
+      padding-top: 10px;
+    }
+
+    /* Left sidebar layout */
+
+    .left-sidebar {
+      text-align: center;
+      font-size: 0;
+    }
+
+    .left-sidebar .column {
+      width: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .left-sidebar .left {
+      max-width: 100px;
+    }
+
+    .left-sidebar .right {
+      max-width: 500px;
+    }
+
+    .left-sidebar .img {
+      width: 100%;
+      max-width: 80px;
+      height: auto;
+    }
+
+    .left-sidebar .contents {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .left-sidebar a {
+      color: #85ab70;
+    }
+
+    .two-normal-column {
+      text-align: center;
+      font-size: 0;
+    }
+
+    .two-normal-column .column {
+      width: 50%;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .btn-default {
+      text-transform: uppercase;
+      border-color: #2397D4;
+      color: #2397D4;
+      max-width: 630px;
+      display: inline-table;
+      text-decoration: none;
+      padding: 15px 30px;
+      vertical-align: middle;
+      border-radius: 3px;
+      font-weight: bold;
+      font-size: 14px;
+      text-align: center;
+      background: transparent;
+      border-style: solid;
+    }
+
+    .btn-default>span {
+      display: inline-table;
+      margin-top: 15px;
+      margin-right: 4px;
+    }
+
+    .btn-default>span:last-child {
+      margin-left: 5px;
+    }
+
+    .btn-default:hover {
+      cursor: pointer;
+    }
+
+    .product__image {
+      width: 40px;
+      height: 40px;
+      display: none;
+    }
+
+    img.barcode {
+      display: none;
+    }
+
+    .barcode-title {
+      display: block;
+      text-transform: uppercase;
+      color: #2397D4;
+      text-align: center;
+      font-weight: bold;
+      padding: 20px 0px 5px 0px;
+    }
+
+    p.barcode {
+      text-decoration: none;
+      font-size: 16px;
+      color: #7F7F7F;
+      margin: 14px 10px;
+      text-align: center;
+    }
+
+    @media screen and (min-width: 468px) {
+      .product__image {
+        display: block;
+      }
+      .product__wrapper {
+        margin-left: 24px;
+      }
+
+      img.barcode {
+        display: block;
+      }
+
+      .barcode-title {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 968px) {
+      .product__image {
+        width: 95px;
+        height: 95px;
+      }
+    }
+
+    .title,
+    .subtitle {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 24px;
+    }
+
+    .subtitle {
+      font-weight: 400;
+    }
+
+    .paragraph {
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .list-items li {
+      margin-bottom: 10px;
+    }
+
+    .list-items li:before {
+      content: "·";
+      color: #7f7f7f;
+      float: left;
+      font-size: 30px;
+      vertical-align: middle;
+      line-height: 20px;
+      margin-right: 10px;
+    }
+
+    @media screen and (min-width: 480px) {
+      .title,
+      .subtitle {
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      .paragraph {
+        font-size: 18px;
+      }
+    }
+
+    /* .subtitle.content {
+      max-width: 410px;
+    } */
+
+    @media screen and (min-width: 968px) {
+      .subtitle {
+        font-size: 24px;
+      }
+    }
+
+    @media screen and (max-width: 520px) {
+      .two-normal-column {
+        padding: 20px 0;
+      }
+
+      .two-normal-column .column {
+        display: block;
+        width: 100%;
+      }
+
+      .two-normal-column .column td {
+        width: 100% !important;
+        text-align: center !important;
+      }
+
+      .text.description {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+
+      .text.logo p {
+        display: block;
+        margin-bottom: 10px;
+      }
+    }
+
+    hr {
+      color: #CBCBCB;
+      opacity: 0.6;
+    }
+
+    @media screen and (max-width: 580px) {
+      hr {
+        margin: 24px 40px 0px 40px;
+      }
+    }
+
+    .status {
+      padding: 0px 10px;
+    }
+
+    @media screen and (max-width: 480px) {
+      .img-status {
+        width: 185px;
+      }
+    }
+  </style>
+  <!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+        table {border-collapse: collapse;}
+    </style>
+    <![endif]-->
+
+</head>
+
+<body>
+  <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden; mso-hide: all;">Preencha seus dados bancários para que a gente possa depositar seu reembolso.</div>
+  <center class="wrapper">
+    <div class="webkit">
+      <!--[if (gte mso 9)|(IE)]>
+          <table width="600" align="center">
+          <tr>
+          <td>
+          <![endif]-->
+      <table class="outer" align="center">
+        <tr>
+          <td height="100" class="two-normal-column">
+            <div class="column">
+              <table width="100%">
+                <tr>
+                  <td>
+                    <table class="contents">
+                      <tr>
+                        <td style="text-align: left;">
+                          <img src="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/lmm.png" srcset="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/lmm@2x.png" alt="Merchant logo" width="auto" height="40" />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="column">
+              <table width="100%">
+                <tr>
+                  <td>
+                    <table class="contents">
+                      <tr>
+                        <td class="text description" style="vertical-align: center; font-size: 12px; text-align: right;">
+                          <p>Pagamento via</p>
+                        </td>
+                        <td class="text logo" style="vertical-align: center; font-size: 12px; text-align: right;">
+                          <p>Pagamento via</p>
+                          <img src="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/logo-ebanx.png" srcset="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/logo-ebanx@2x.png" alt="EBANX" width="110" height="22" style="display: inline-block;" />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            <hr>
+            <br />
+            <img class="img-status" src="status.png" alt="Status" width="251" height="98" style="max-width: 100%; height: auto;" class="status">
+            <br />
+            <br />
+          </td>
+        </tr>
+        <tr>
+          <td style="border-radius: 5px 5px 0px 0px; padding: 25px 32px; background-color: #F1C40F;">
+            <strong class="title"> Olá << NAME >>! </strong>
+            <p class="subtitle content">você ainda não preencheu o formulário para receber o reembolso de <strong><< R$ 1000,00 >></strong> do << {merchant_name} >>.</p>
+            <br />
+            <p class="paragraph"><b>Envie seus dados agora e garanta seu reembolso :)</b></p>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <table class="table-content" align="center" style="border-radius: 0px 0px 5px 5px;">
+              <tbody>
+                <tr>
+                  <td>
+                    <table class="table-inner-content" align="center">
+                      <tr>
+                        <td height="15"></td>
+                      </tr>
+                      <tr>
+                        <td style="padding-top: 10px; padding-bottom: 10px;">
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">Para realizarmos o depósito do seu reembolso, precisamos que você clique no botão ou acesse o link abaixo e <strong>preencha seus dados bancários</strong> (banco, agência, conta corrente com dígito).</p>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding-top: 10px; padding-bottom: 10px;">
+                          <table width="100%">
+                            <tbody>
+                              <tr>
+                                <td>
+                                  <table style="width: 100%; padding: 0 0 10px 0; font-size: 14px; color: #D99505; background-color: #fff; border-radius: 3px; text-align: center;">
+                                    <tr>
+                                      <td>
+                                        <a href="" style="display:inline-block;max-width:272px;width: 100%;padding:20px 0;border-radius:32px;background-color:#2F4A75;text-decoration:none;">
+                                          <span style="color:#fff;font-size: 16px;font-weight:700;">PREENCHER DADOS</span>
+                                        </a>
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="12">
+                          <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">Se preferir, você pode acessar o formulário copiando e colando esse link no seu navegador: << {form_link_adress} >></p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <br />
+
+            <table class="table-content table-border" align="center" style="border-radius: 5px;">
+              <tr>
+                <td>
+                  <table class="table-inner-content" align="center">
+                    <tr>
+                      <td height="16"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table class="contents">
+                          <tr>
+                            <td width="80" valign="top">
+                              <img src="icon-important.png" srcset="icon-important@2x.png" width="62" height="53" alt="Importante" />
+                            </td>
+                            <td>
+                              <h4 style="margin: 0; font-size: 16px; font-weight: 700; color: #7F7F7F;">Importante</h4>
+                              <ul class="list-items" style="padding-left:0;list-style:none;">
+                                <li>
+                                  <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">O valor do IOF (imposto) não é reembolsável, por isso o valor pode ser diferente da compra.</p>
+                                </li>
+                                <li>
+                                  <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">Os dados de CPF e Nome Completo do titular da conta bancária devem ser os mesmos do cadastro no << {merchant_name} >>.</p>
+                                </li>
+                                <li>
+                                  <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">O prazo médio para o pagamento é de 10 dias úteis, a partir do envio dos seus dados.</p>
+                                </li>
+                              </ul>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            <br>
+            <table class="table-content table-border" align="center" style="border-radius: 5px;">
+              <tr>
+                <td>
+                  <table class="table-inner-content" align="center">
+                    <tr>
+                      <td height="16"></td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <table class="contents">
+                          <tr>
+                            <td width="80" valign="top">
+                              <img src="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/icon-help.png" srcset="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/icon-help@2x.png" width="62" height="61" alt="Dúvidas">
+                            </td>
+                            <td>
+                              <h4 style="margin: 0; font-size: 16px; font-weight: 700; color: #7F7F7F;">Dúvidas</h4>
+                              <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">Se você tem alguma dúvida sobre sua compra ou o motivo do seu reembolso, entre em contato diretamente com o << MERCHANT >>. Apenas o site onde a compra foi realizada possui as informações sobre o seu pedido.
+                              <br />
+                              <br />
+                              <p style="font-size: 14px; color: #7F7F7F; line-height: 1.6">Para te ajudar ainda mais, o EBANX tem uma <a href="https://help.ebanx.com/hc/pt-br?utm_source=transacional&utm_medium=email&utm_campaign=reminder_request_bank_details_br&utm_term=central_de_ajuda&utm_content=link_central_de_ajuda" title="Central de Ajuda" target="_blank" style="color: #2397D4">Central de Ajuda</a> com vários tópicos que podem facilitar a sua vida. Clique <a href="https://help.ebanx.com/hc/pt-br?utm_source=transacional&utm_medium=email&utm_campaign=reminder_request_bank_details_br&utm_term=central_de_ajuda&utm_content=link_aqui" title="Central de Ajuda" target="_blank" style="color: #2397D4">aqui</a> e acesse.</p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td height="32"></td>
+        </tr>
+        <tr>
+          <td>
+            <table width="100%" align="center">
+              <hr>
+              <tr>
+                <td height="35"></td>
+              </tr>
+              <tr align="center">
+                <td width="100%" align="center">
+                  <p style="margin-bottom: 15px; text-align: center; font-size: 12px; color: #808080;">Pode confiar. Você pagou com EBANX. ;)</p>
+                  <img src="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/logo-ebanx.png" srcset="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/logo-ebanx@2x.png" width="92" height="18" alt="EBANX" />
+                </td>
+              </tr>
+              <tr>
+                <td height="50"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!--[if (gte mso 9)|(IE)]>
+          </td>
+          </tr>
+          </table>
+          <![endif]-->
+    </div>
+  </center>
+</body>
+
+</html>
