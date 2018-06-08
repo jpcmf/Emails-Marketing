@@ -350,48 +350,32 @@
       }
     }
 
-    .title {
-      line-height: 28px;
+    .title,
+    .subtitle {
+      color: #fff;
       font-size: 20px;
       font-weight: bold;
-      color: #fff;
-    }
-
-    @media screen and (min-width: 968px) {
-      .title {
-        font-size: 24px;
-      }
-    }
-
-    .title {
-      line-height: 28px;
-      font-size: 20px;
-      font-weight: bold;
-      color: #fff;
+      line-height: 24px;
     }
 
     .subtitle {
-      line-height: 28px;
-      font-size: 20px;
       font-weight: 400;
-      color: #fff;
-    }
-
-    .subtitle.content {
-      max-width: 410px;
     }
 
     .paragraph {
-      font-size: 18px;
+      font-size: 14px;
       color: #fff;
     }
 
-    @media screen and (min-width: 968px) {
-      .title {
-        font-size: 24px;
-      }
+    @media screen and (min-width: 480px) {
+      .title,
       .subtitle {
-        font-size: 24px;
+        font-size: 28px;
+        line-height: 32px;
+      }
+
+      .paragraph {
+        font-size: 18px;
       }
     }
 
@@ -436,6 +420,12 @@
     .status {
       padding: 0px 10px;
     }
+
+    @media screen and (max-width: 480px) {
+      .img-status {
+        width: 300px;
+      }
+    }
   </style>
   <!--[if (gte mso 9)|(IE)]>
     <style type="text/css">
@@ -446,6 +436,7 @@
 </head>
 
 <body>
+  <div style="display:none;font-size:1px;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden; mso-hide: all;">Pague agora seu boleto e garanta a confirmação do seu pedido.</div>
   <center class="wrapper">
     <div class="webkit">
       <!--[if (gte mso 9)|(IE)]>
@@ -496,9 +487,7 @@
           <td style="text-align: center;">
             <hr>
             <br />
-            <br />
-            <img src="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/status.png" srcset="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/status@2x.png" alt="Status" width="395" height="100" style="max-width: 100%;
-             height: auto;" class="status">
+            <img class="img-status" src="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/status.png" srcset="https://s3-sa-east-1.amazonaws.com/cdn-email.ebanx.com/customer-service/status@2x.png" alt="Status" width="395" height="100" style="max-width: 100%;height: auto;" class="status">
             <br />
             <br />
           </td>
